@@ -1,0 +1,131 @@
+# ==============================
+# JAVA & MAVEN
+# ==============================
+target/
+**/target/
+*.class
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# ==============================
+# NODE.JS & REACT
+# ==============================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.npm/
+.eslintcache
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+
+# ==============================
+# ENVIRONMENT VARIABLES & SECRETS
+# ==============================
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# ==============================
+# LOCAL DATABASES & BACKUPS
+# ==============================
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+
+# ==============================
+# LOGS & TEMPORARY FILES
+# ==============================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# ==============================
+# JAVA IDE FILES
+# ==============================
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.springBeans
+.sts4-cache/
+
+# ==============================
+# VS CODE
+# ==============================
+.vscode/
+
+# ==============================
+# NETBEANS
+# ==============================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ==============================
+# PYTHON (IF USED)
+# ==============================
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ==============================
+# OS FILES
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# ==============================
+# LOCAL APPLICATION CONFIG
+# ==============================
+application-local.properties
+application-local.yml
+application-local.yaml
+application-dev.properties
+application-dev.yml
+application-dev.yaml
+config.local.*
+
+# ==============================
+# GENERATED FILES
+# ==============================
+*.tmp
+*.swp
+*.swo
+# Preserve nested frontend Git history locally; do not upload it
+quitq-ui/.git-backup/

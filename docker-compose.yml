@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: quitq-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: quitq_db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+  backend:
+    build: .
+    container_name: quitq-backend
+    restart: always
+    ports:
+      - "1111:1111"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/quitq_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - db
+
+  frontend:
+    build: ./quitq-ui
+    container_name: quitq-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  db-data:
